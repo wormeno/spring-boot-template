@@ -1,15 +1,13 @@
 package template.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import springfox.documentation.swagger2.mappers.ModelMapper;
 import template.dto.UserDto;
 import template.dto.UserMapper;
 import template.generic.controller.RestGenericController;
-import template.generic.service.GenericService;
+import template.generic.service.GenericServiceEntity2;
 import template.model.User;
 import template.service.UserService;
 
@@ -26,7 +24,7 @@ public class UserController extends RestGenericController<User,Long> {
     private UserMapper userMapper;
 
     @Override
-    protected GenericService<User, Long> getService() {
+    protected GenericServiceEntity2<User, Long> getService() {
         return userService;
     }
 

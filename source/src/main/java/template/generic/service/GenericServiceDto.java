@@ -1,16 +1,12 @@
 package template.generic.service;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import template.generic.model.EntidadPersistente;
 
-public class GenericServiceDto extends GenericService {
+public class GenericServiceDto<E extends EntidadPersistente,ID> extends GenericService {
 
-    @Override
-    protected GenericService getService() {
-        return null;
-    }
 
-    @Override
-    protected JpaRepository getRepository() {
-        return null;
+    public EntidadPersistente save(EntidadPersistente entity) {
+        return super.save(entity);
+
     }
 }

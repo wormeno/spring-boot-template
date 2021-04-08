@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import template.generic.controller.RestGenericController;
 import template.model.Barrio;
 import template.service.BarrioService;
-import template.generic.service.GenericService;
+import template.generic.service.GenericServiceEntity2;
 
 import javax.validation.Valid;
 
@@ -21,7 +21,7 @@ public class BarrioController extends RestGenericController<Barrio,Long> {
     private BarrioService barrioService;
 
     @Override
-    protected GenericService<Barrio, Long> getService() {
+    protected GenericServiceEntity2<Barrio, Long> getService() {
         return barrioService;
     }
 

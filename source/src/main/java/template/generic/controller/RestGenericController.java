@@ -6,14 +6,13 @@ import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.server.ResponseStatusException;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import template.generic.response.ResponseModel;
 import template.generic.response.ResponseModelBuilder;
 import template.generic.response.ResponseModelBuilderPaginator;
 import template.generic.exeption.GenericException;
 import template.generic.model.EntidadPersistente;
-import template.generic.service.GenericService;
+import template.generic.service.GenericServiceEntity2;
 
 import javax.validation.Valid;
 import java.net.URI;
@@ -22,7 +21,7 @@ import java.util.Optional;
 
 public abstract class RestGenericController<E  extends EntidadPersistente,ID> implements GenericController<E>{
 
-    protected abstract GenericService<E, ID> getService();
+    protected abstract GenericServiceEntity2<E, ID> getService();
 
     @GetMapping("/{pageIndex}/{pageSize}")
     @ResponseStatus(value = HttpStatus.OK)

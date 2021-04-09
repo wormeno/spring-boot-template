@@ -13,13 +13,13 @@ public class BarrioService extends GenericService<Barrio, Long> {
     @Autowired
     private BarrioRepository barrioRepository;
 
-    @Override
-    protected GenericService<Barrio, Long> getService() {
-        return null;
-    }
+//    @Override
+//    protected GenericService<Barrio, Long> getService() {
+//        return null;
+//    }
 
-    @Override
+/*    @Override
     protected JpaRepository<Barrio, Long> getRepository() {
         return barrioRepository;
-    }
+    }*/
 }

@@ -12,7 +12,7 @@ public class UserService extends GenericService<User, Long> {
     @Autowired
     private UserRepository userRepository;
 
-    @Override
+    /*@Override
     protected GenericService<User, Long> getService() {
         return null;
     }
@@ -20,7 +20,7 @@ public class UserService extends GenericService<User, Long> {
     @Override
     protected JpaRepository<User, Long> getRepository() {
         return userRepository;
-    }
+    }*/
 
 
 }

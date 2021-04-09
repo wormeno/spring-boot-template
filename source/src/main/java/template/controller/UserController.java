@@ -13,6 +13,7 @@ import template.generic.service.GenericService;
 import template.model.User;
 import template.service.UserService;
 
+import javax.persistence.EntityGraph;
 import javax.validation.Valid;
 
 @RestController
@@ -34,7 +35,7 @@ public class UserController extends RestGenericController<User,Long> {
 
     @PostMapping
     @ResponseStatus(value = HttpStatus.OK)
-    public ResponseEntity<?> save(@Valid @RequestBody UserDto userDto) {
+    public ResponseEntity<?> save1(@Valid @RequestBody EntityGraph userEntityGraph) {
         System.out.println("estamos aca");
 
 //        User user = modelMapper.map(userDto,User.class);

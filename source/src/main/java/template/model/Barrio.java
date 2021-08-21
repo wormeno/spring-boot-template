@@ -1,20 +1,22 @@
 package template.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonView;
 import lombok.Data;
-import template.generic.model.EntidadPersistente;
+import lombok.NonNull;
 
 import javax.persistence.Entity;
+import javax.validation.constraints.NotEmpty;
 
 @Data
 @Entity(name = "barrios")
 public class Barrio extends EntidadPersistente {
 
-
+    @NonNull
+    @NotEmpty(message = "Debe ingresar el nombre")
     private String nombre;
 
-
+    @NonNull
     private String descripcion;
+
+    public Barrio(){}
 
 }

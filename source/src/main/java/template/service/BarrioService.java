@@ -3,14 +3,25 @@ package template.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
-import template.generic.service.GenericServiceEntity2;
 import template.model.Barrio;
 import template.repository.BarrioRepository;
 
-@Service
-public class BarrioService extends GenericServiceEntity2<Barrio, Long> {
+import java.util.Optional;
 
+@Service
+public class BarrioService extends GenericEntityService<Barrio, Long> {
     @Autowired
+    private BarrioRepository barrioRepository;
+
+    @Override
+    protected JpaRepository<Barrio, Long> getRepository() {
+        return barrioRepository;
+    }
+
+
+
+
+    /*@Autowired
     private BarrioRepository barrioRepository;
 
     @Override
@@ -21,5 +32,5 @@ public class BarrioService extends GenericServiceEntity2<Barrio, Long> {
     @Override
     protected JpaRepository<Barrio, Long> getRepository() {
         return barrioRepository;
-    }
+    }*/
 }

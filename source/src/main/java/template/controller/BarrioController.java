@@ -30,7 +30,6 @@ public class BarrioController extends GenericEntityController<Barrio, Long> {
 /*    @PostMapping
     @ResponseStatus(value = HttpStatus.OK)
     public ResponseEntity<?> save(@Valid @RequestBody Barrio barrio) {
-        System.out.println("estamos aca");
         return super.save(barrio);
 
 

@@ -38,4 +38,20 @@ class GenericEntityService implements GenericService
 class GenericDtoService implements GenericService
 
 GenericEntityService ..> RestException
+
+class EntidadPersistente {
+  id: Long
+  createDate: LocalDateTime
+  lastModifiedDate: LocalDateTime
+}
+
+class UnaEntidad extends EntidadPersistente
+
+class DtoPersistente {
+  id: Long
+  createDate: LocalDateTime
+  lastModifiedDate: LocalDateTime
+}
+
+class UnDto extends DtoPersistente
 @enduml

@@ -19,10 +19,8 @@ public abstract class GenericDtoService <D,E extends EntidadPersistente ,ID> ext
     public D save(D dtoEntity){
         E entity = mapperDtoToEntity(dtoEntity);
         super.save(entity);
-       // dtoEntity.setId(entity.getId());
         D newDtoEntity = mapperEntityToDto(entity);
         return newDtoEntity;
-     //   return (D) super.save(entity);
     }
 
 
@@ -44,9 +42,7 @@ public abstract class GenericDtoService <D,E extends EntidadPersistente ,ID> ext
         return Optional.empty();
     }
 
-    public void delete(Long aLong) {
 
-    }
 /*
     public List<D> find() {
         return null;

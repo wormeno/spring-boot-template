@@ -46,9 +46,6 @@ public abstract class GenericEntityService<E extends EntidadPersistente ,ID> /*i
                         throw new GenericException("Debe completar "+unaEntidad.getKey().toString());
                 });
 
-       /* entity.setId((Long) id);
-        entity.setCreateDate(entityStored.get().getCreateDate());
-        entity.setLastModifiedDate(LocalDateTime.now());*/
         return this.getRepository().save(entity);
     }
 
@@ -78,27 +75,14 @@ public abstract class GenericEntityService<E extends EntidadPersistente ,ID> /*i
     }
 
 
-
-
     public Optional findById(ID id) {
         return this.getRepository().findById(id);
     }
-
-
-
 
 
     public List<E> find() {
         return this.getRepository().findAll();
     }
 
-    /*
-
-    public class UserMap extends PropertyMap<User, User> {
-        protected void configure() {
-            skip().setId(null);
-        }
-    }
-*/
 
 }

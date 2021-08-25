@@ -1,8 +1,6 @@
 package template.controller;
 
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import template.dto.DtoPersistente;
@@ -12,8 +10,6 @@ import template.service.GenericDtoService;
 
 import javax.validation.Valid;
 import java.net.URI;
-import java.util.HashMap;
-import java.util.Map;
 
 
 public abstract  class GenericDtoController <D extends DtoPersistente,E extends EntidadPersistente, ID> implements GenericController<D,ID> {
@@ -50,20 +46,5 @@ public abstract  class GenericDtoController <D extends DtoPersistente,E extends 
         return null;
     }
 
-
-/*    public ResponseModel<Void> delete( Object id) {
-        return null;
-    }*/
-
-/*
-
-    public ResponseEntity<?> partialUpdate(Long aLong, D partialUpdate) {
-        return null;
-    }
-*/
-
-/*    public ResponseModel<Void> delete(Long aLong) {
-        return null;
-    }*/
 
 }

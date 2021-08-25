@@ -1,4 +1,4 @@
-package template.generic.model;
+package template.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.annotations.ApiModelProperty;
@@ -7,23 +7,24 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
 public class EntidadPersistente{
 
-    @JsonIgnore
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @JsonIgnore
     @Column(name = "create_date")
-    private LocalDate createDate;
+    private LocalDateTime createDate;
 
     @JsonIgnore
     @Column(name = "last_modified_date")
-    private LocalDate lastModifiedDate;
+    private LocalDateTime lastModifiedDate;
 
     public Long getId() {
         return id;
@@ -33,19 +34,19 @@ public class EntidadPersistente{
         this.id = id;
     }
 
-    public void setCreateDate(LocalDate date) {
+    public void setCreateDate(LocalDateTime date) {
         this.createDate = date;
     }
 
-    public void setLastModifiedDate(LocalDate date){
+    public void setLastModifiedDate(LocalDateTime date){
         this.lastModifiedDate = date;
     }
 
-    public LocalDate getCreateDate(){
+    public LocalDateTime getCreateDate(){
         return createDate;
     }
 
-    public LocalDate getLastModifiedDate(){
+    public LocalDateTime getLastModifiedDate(){
         return lastModifiedDate;
     }
 

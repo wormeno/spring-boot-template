@@ -2,15 +2,25 @@ package template.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Data;
+import lombok.*;
+import template.Validation.CuitConstraint;
 
+import javax.validation.constraints.*;
+
+//@EqualsAndHashCode(callSuper = true)
 @Data
-public class UserDto {
+public class UserDto extends DtoPersistente {
 
-    @ApiModelProperty(example = "25881112225", name = "cuil", value = "Ingrese el cuil", required = true)
     @JsonIgnore
+    private Long id;
+
+    @ApiModelProperty( example = "25881112225", name = "cuil", value = "Ingrese el cuil", required = true )
+    @NotNull( message = "Debe ingresar un valor para el cuil" )
+    @CuitConstraint(message = "El cuil debe ser valido")
     private String cuil;
+
+    @NotNull( message = "Debe ingresar un valor para el barrio" )
     @ApiModelProperty(example = "25", name = "barrio", value = "Ingrese el Barrio", required = true)
-    private Integer barrio;
+    private Long barrioId;
 
 }

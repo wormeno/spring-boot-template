@@ -1,0 +1,57 @@
+@startuml
+class RestException extends ResponseEntityExceptionHandler
+interface GenericController{
++save()
++update()
++partialUpdate()
++find()
+}
+
+abstract class  GenericEntityController implements GenericController{
+
+{abstract} GenericService getService()
++save()
++update()
++partialUpdate()
++find()
+}
+
+abstract class GenericService {
+
+{abstract} JpaRepository getRepository()
+
+}
+
+abstract class  GenericDtoController implements GenericController{
+
+{abstract} GenericService getService()
++save()
++update()
++partialUpdate()
++find()
+}
+
+GenericEntityController ..> GenericService
+
+class GenericEntityService implements GenericService
+
+class GenericDtoService implements GenericService
+
+GenericEntityService ..> RestException
+
+class EntidadPersistente {
+  id: Long
+  createDate: LocalDateTime
+  lastModifiedDate: LocalDateTime
+}
+
+class UnaEntidad extends EntidadPersistente
+
+class DtoPersistente {
+  id: Long
+  createDate: LocalDateTime
+  lastModifiedDate: LocalDateTime
+}
+
+class UnDto extends DtoPersistente
+@enduml

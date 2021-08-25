@@ -1,0 +1,12 @@
+@startuml
+class CuitValidator implements CuitConstraint{
+  + isValid()
+}
+
+class UsuarioDto {
+   
+  -@CuitConstraint(message) Cuit: String
+}
+
+UsuarioDto ..> CuitValidator
+@enduml

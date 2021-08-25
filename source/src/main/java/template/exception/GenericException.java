@@ -1,4 +1,4 @@
-package template.generic.exeption;
+package template.exception;
 
 public class GenericException extends RuntimeException{
 

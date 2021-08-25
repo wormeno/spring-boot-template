@@ -33,6 +33,12 @@ public abstract class GenericDtoService <D,E extends EntidadPersistente ,ID> ext
         return dtoEntity2;
     }
 
+    public D partialUpdate(ID id, D dtoEntity){
+        E entity = mapperDtoToEntity(dtoEntity);
+        super.partialUpdate(id, entity);
+        D dtoEntity2 = mapperEntityToDto(entity);
+        return dtoEntity2;
+    }
 
     public Optional<D> findById(ID aLong) {
         return Optional.empty();

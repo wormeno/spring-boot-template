@@ -1,15 +1,13 @@
 package template.controller;
 
-
-import org.modelmapper.internal.Errors;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import template.generic.response.ResponseModel;
-
 import javax.validation.Valid;
+
 @Validated
 public interface GenericController<E,ID> {
 
@@ -17,7 +15,7 @@ public interface GenericController<E,ID> {
   //  public ResponseEntity<?> findAll();
     @PostMapping
     @ResponseStatus(value = HttpStatus.OK)
-    public ResponseEntity<?> save(@Valid @RequestBody E entity, BindingResult bindingResult);
+    public ResponseEntity<?> save(@Valid @RequestBody E entity);
 
     @PutMapping("/{id}")
     @ResponseStatus(value = HttpStatus.OK)
@@ -34,4 +32,5 @@ public interface GenericController<E,ID> {
     @DeleteMapping("/{id}")
     @ResponseStatus(value = HttpStatus.OK)
     public @ResponseBody ResponseModel<Void> delete(@Valid @PathVariable ID id);
+
 }

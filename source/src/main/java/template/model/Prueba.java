@@ -8,10 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 
 @Entity
 @Data
@@ -26,9 +23,11 @@ public class Prueba {
     @NotBlank(message = "Blog Editor cannot be blank")
     @Pattern(regexp = "^[a-zA-z]*$", message = "Debe ingresar un string")
     private String blogEditor;
-    @Email(message = "Email should be valid")
+    @Email(message = "Email should be valido")
     private String blogEmail;
 
     @NotNull
+    @Min(value = 1, message = "Required min age is 10")
+    @Max(value = 5, message = "Required max age is 50")
     private Integer direccion;
 }

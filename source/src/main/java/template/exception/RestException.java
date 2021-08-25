@@ -2,6 +2,8 @@ package template.exception;
 
 import com.fasterxml.jackson.databind.exc.InvalidFormatException;
 import jdk.internal.instrumentation.Logger;
+import lombok.var;
+import org.springframework.context.support.DefaultMessageSourceResolvable;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpHeaders;
@@ -12,6 +14,7 @@ import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.support.WebExchangeBindException;
 import org.springframework.web.context.request.ServletWebRequest;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
@@ -21,6 +24,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.validation.ConstraintViolation;
 import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.*;
+import java.util.stream.Collectors;
 
 import static org.springframework.http.HttpStatus.*;
 
@@ -28,6 +32,20 @@ import static org.springframework.http.HttpStatus.*;
 @ControllerAdvice
 public class RestException  extends ResponseEntityExceptionHandler  {
     private Logger log;
+
+/*
+
+    @ExceptionHandler(WebExchangeBindException.class)
+    public ResponseEntity<List<String>> handleException(WebExchangeBindException e) {
+        var errors = e.getBindingResult()
+                .getAllErrors()
+                .stream()
+                .map(DefaultMessageSourceResolvable::getDefaultMessage)
+                .collect(Collectors.toList());
+        return ResponseEntity.badRequest().body(errors);
+    }
+*/
+
 
 
     /**
@@ -39,11 +57,16 @@ public class RestException  extends ResponseEntityExceptionHandler  {
             HttpHeaders headers,
             HttpStatus status,
             WebRequest request) {
-        ServletWebRequest servletWebRequest = (ServletWebRequest) request;
+      //  ServletWebRequest servletWebRequest = (ServletWebRequest) request;
 
-        String campo = ex.getMessage().substring(ex.getMessage().indexOf("[\""));
-        String error  = ex.getMessage().substring(ex.getMessage().indexOf("from")+5,ex.getMessage().indexOf(";"));
-        error = error.concat(" from "+campo);
+        String message = ex.getMessage();
+        String error = "";
+        if( ex.getMessage().contains("[\"")){
+            String campo = ex.getMessage().substring(ex.getMessage().indexOf("[\""));
+            error  = ex.getMessage().substring(ex.getMessage().indexOf("from")+5,ex.getMessage().indexOf(";"));
+            error = error.concat(" from "+campo);
+        }
+
       //  error.replace("from ","");
 //        error.replace("`java.lang.Long`","");
 //        error.replace("`java.lang.Ingeger`","");
@@ -124,13 +147,19 @@ public class RestException  extends ResponseEntityExceptionHandler  {
     }
 
     /**
-     * Intecepta las Excepciones ocurridas por Handles EntityNotFoundException.
+     * Intecepta las Excepciones ocurridas excepciones ocurridos en las relaciones indicadas en el body.
      */
     @ExceptionHandler(EntityNotFoundException.class)
     private ResponseEntity<Object> JpaObjectRetrievalFailureException(EntityNotFoundException ex) {
-        String packageName = new EntidadPersistente().getClass().getPackage().getName();
+        String packageName = new EntidadPersistente().getClass().getPackage().getName();//GetNameEntity
         String error = ex.getMessage().replace(packageName+".","");
+        error = error.replace("with id","");
         return buildResponseEntity(new ErrorMessage(BAD_REQUEST, error, ex));
+    }
+
+    @ExceptionHandler(template.exception.GenericException.class)
+    private ResponseEntity<Object> GenericExceptionFailureException(GenericException ex) {
+        return buildResponseEntity(new ErrorMessage(BAD_REQUEST, ex.getMessage(), ex));
     }
 
 

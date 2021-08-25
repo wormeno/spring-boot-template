@@ -31,10 +31,5 @@ public class ErrorMessage {
         this.message = "Unexpected error";
         this.debugMessage = ex.getLocalizedMessage();
     }
-  /*  public ErrorMessage( String message) {
-        // this();
-     //   this.status = status;
-        this.message = message;
-      //  this.debugMessage = ex.getLocalizedMessage();
-    }*/
+
 }

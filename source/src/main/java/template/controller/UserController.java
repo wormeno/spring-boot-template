@@ -2,9 +2,6 @@ package template.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.validation.annotation.Validated;
-import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.*;
@@ -12,7 +9,6 @@ import template.dto.UserDto;
 import template.model.User;
 import template.service.GenericDtoService;
 
-import javax.validation.Valid;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -77,7 +73,7 @@ public class UserController extends GenericDtoController<UserDto,User,Long> {
         return null;
     }
 */
-@ResponseStatus(HttpStatus.BAD_REQUEST)
+/*@ResponseStatus(HttpStatus.BAD_REQUEST)
 @ExceptionHandler(MethodArgumentNotValidException.class)
 public Map<String, String> handleMethodArgumentNotValid(MethodArgumentNotValidException ex) {
     Map<String, String> errors = new HashMap<>();
@@ -86,6 +82,6 @@ public Map<String, String> handleMethodArgumentNotValid(MethodArgumentNotValidEx
             errors.put(error.getField(), error.getDefaultMessage()));
 
     return errors;
-}
+}*/
 
 }

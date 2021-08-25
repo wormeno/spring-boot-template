@@ -20,7 +20,7 @@ public abstract  class GenericDtoController <D extends DtoPersistente,E extends 
 
     protected abstract GenericDtoService<D,E, ID> getService();
 
-    public ResponseEntity<?> save(@Valid @RequestBody D saveEntity,BindingResult bindingResult) {
+    public ResponseEntity<?> save(@Valid @RequestBody D saveEntity) {
 
         D entity = getService().save( saveEntity);
 
@@ -34,35 +34,36 @@ public abstract  class GenericDtoController <D extends DtoPersistente,E extends 
         return ResponseEntity.created(uri).build();
     }
 
-/*
 
-    public ResponseEntity<?> update(@Valid @PathVariable Object id,@RequestBody Object entity) {
-        return null;
+    public ResponseEntity<?> partialUpdate(@Valid  @PathVariable ID id, @RequestBody D partialUpdate ) {
+        D entity = getService().partialUpdate(id,partialUpdate);
+        URI uri = ServletUriComponentsBuilder.fromCurrentRequest().buildAndExpand(entity.getId()).toUri();
+        return ResponseEntity.created(uri).build();
     }
 
-    public ResponseEntity<?> partialUpdate(@Valid  @PathVariable ID id, @RequestBody Object entity ) {
+    public @ResponseBody ResponseModel<Void> delete(@Valid @PathVariable ID id){
+        getService().delete(id);
         return null;
     }
-*/
-
-
 
     public ResponseEntity<?> find() {
         return null;
     }
 
 
-    public ResponseModel<Void> delete( Object id) {
+/*    public ResponseModel<Void> delete( Object id) {
         return null;
-    }
+    }*/
 
+/*
 
     public ResponseEntity<?> partialUpdate(Long aLong, D partialUpdate) {
         return null;
     }
+*/
 
-    public ResponseModel<Void> delete(Long aLong) {
+/*    public ResponseModel<Void> delete(Long aLong) {
         return null;
-    }
+    }*/
 
 }

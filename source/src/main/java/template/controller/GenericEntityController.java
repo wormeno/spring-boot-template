@@ -20,7 +20,7 @@ public abstract class GenericEntityController <E extends EntidadPersistente,ID> 
 
     @PostMapping
     @ResponseStatus(value = HttpStatus.OK)
-    public ResponseEntity<?> save(@Valid @RequestBody E entity , BindingResult bindingResult) {
+    public ResponseEntity<?> save(@Valid @RequestBody E entity ) {
         entity = getService().save(entity);
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(entity.getId()).toUri();
         return ResponseEntity.created(uri).build();

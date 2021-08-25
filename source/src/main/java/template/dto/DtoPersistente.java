@@ -9,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.time.chrono.ChronoLocalDateTime;
 
 @Data
 public class DtoPersistente implements Serializable {
@@ -16,8 +17,8 @@ public class DtoPersistente implements Serializable {
     private Long id;
 
     @JsonIgnore
-    private LocalDateTime createDate;
+    private LocalDateTime createDate ;
 
     @JsonIgnore
-    private LocalDateTime lastModifiedDate;
+    private LocalDateTime lastModifiedDate = LocalDateTime.now();
 }

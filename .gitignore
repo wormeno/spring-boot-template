@@ -1,5 +1,9 @@
 ### IntelliJ IDEA ###
 .idea
+.idea/compiler.xml
+.idea/encodings.xml
+.idea/modules.xml
+.idea/workspace.xml
 *.iws
 *.iml
 *.ipr

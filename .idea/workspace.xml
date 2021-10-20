@@ -5,23 +5,80 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07b44574-02b9-4f7f-ae1b-e67c80f16e3f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/schema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/controller/BarrioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/src/main/java/template/controller/SnicController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/controller/BarrioDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/controller/GenericDtoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/src/main/java/template/controller/GenericDtoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/dto/DtoPersistente.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/src/main/java/template/dto/DtoPersistente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/exception/RestException.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/src/main/java/template/exception/RestException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/model/EntidadPersistente.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/src/main/java/template/model/EntidadPersistente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/src/main/java/template/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/repository/BarrioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/src/main/java/template/repository/SnicRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/service/BarrioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/src/main/java/template/service/SnicDtoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/service/GenericDtoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/src/main/java/template/service/GenericDtoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/service/GenericEntityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/src/main/java/template/service/GenericEntityService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/src/main/java/template/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/utils/UtilsTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/src/main/java/template/utils/UtilsTemplate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/source/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/source/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/source/schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/TemplateApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/Validation/CuitConstraint.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/Validation/CuitValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/Validation/TipoDelitoSnicConstraint.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/Validation/TipoDelitoSnicValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/Validation/YearConstraint.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/Validation/YearValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/controller/GenericController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/controller/GenericDtoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/controller/GenericEntityController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/controller/PruebaController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/controller/SnicController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/dto/BarrioDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/dto/DtoPersistente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/dto/IgnoreUpdateDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/dto/SnicDelitoDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/dto/SnicDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/dto/UserDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/exception/EntityNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/exception/ErrorMessage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/exception/GenericException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/exception/RestException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/exception/generic/ApiError.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/exception/generic/ApiSubError.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/exception/generic/ApiValidationError.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/exception/generic/LowerCaseClassNameResolver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/exception/generic/RestExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/generic/response/ResponseModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/generic/response/ResponseModelBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/generic/response/ResponseModelBuilderPaginator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/generic/response/ResponseModelPaginator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/model/Agrupacion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/model/Barrio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/model/Departamento.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/model/EntidadPersistente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/model/Estado.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/model/Mes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/model/Provincia.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/model/Prueba.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/model/Seccional.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/model/Snic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/model/SnicDelito.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/model/TipoDelitoSnic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/model/TipoFuerza.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/model/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/repository/EstadoSnicRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/repository/PruebaUserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/repository/SnicRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/repository/TipoDelitoSnicRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/service/EstadoSnicService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/service/GenericDtoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/service/GenericEntityService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/service/GenericServices.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/service/SnicDtoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/swagger/SwaggerConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/utils/UtilsTemplate.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/source/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/source/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/test/java/java/main/TemplateApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/testdb.lck" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/testdb.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/testdb.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/testdb.script" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,12 +137,11 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/source" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.15174508" />
-    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
@@ -94,9 +150,11 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="TemplateApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="template" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="template.TemplateApplication" />
+    <configuration name="RestApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="rest" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="service.rest.RestApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SHORTEN_COMMAND_LINE" value="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -117,6 +175,7 @@
       <workItem from="1631124280538" duration="1387000" />
       <workItem from="1631193551816" duration="1253000" />
       <workItem from="1631203888902" duration="8000" />
+      <workItem from="1634750426967" duration="5680000" />
     </task>
     <servers />
   </component>

@@ -1,8 +1,8 @@
 package template.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import template.model.Barrio;
+import template.model.Snic;
 
-public interface BarrioRepository extends JpaRepository<Barrio,Long> {
+public interface SnicRepository extends JpaRepository<Snic,Long> {
 
 }

@@ -1,0 +1,82 @@
+@startuml
+package DefinicionServiciosRest {
+note "Mixins in Java" as N1
+interface DtoBasicBehavior {
+  -Entyty entity
+  -DtoEntity dtoEntity
+  -ID id
+
+  {abstract} GenericDtoService getService()
+  {abstract} setParent( entityDto, idParent)
+  +saveEntity(entityDto)
+  +updateEntity(entityDto)
+  +partialUpdateEntity(entityDto)
+  +deleteEntity(entityDto)
+
+}
+interface PostDtoOneToMany implements DtoBasicBehavior{
+
+  save(idParent,entityDto)
+}
+interface PatchDtoOneToMany implements DtoBasicBehavior{
+  partialUpdate(idParent,id,entityDto)
+}
+interface PostDto implements DtoBasicBehavior{
+  save(entityDto)
+}
+
+
+interface DeleteDto implements DtoBasicBehavior
+interface PutDto implements DtoBasicBehavior
+interface PatchDto implements DtoBasicBehavior
+
+interface DtoAllBasicServices implements DeleteDto,PostDto,PutDto,PatchDto
+
+}
+
+
+
+
+package Dto {
+
+   CarritosDeCompraDto --> "*"Productos
+
+   class CarritosDeComprasDto extends DtoPersistente
+
+   note "Note Relations\nto OneToMany." as N2
+   CarritosDeCompraDto .. N2
+   N2 .. Productos
+}
+
+package Controllers #DDDDDD{
+   class UserController implements DtoAllBasicServices {
+       - User
+       - UserDto
+
+   }
+   class UserController
+   note left: "Create EndPoints:\nto Post,Delete,Put And Patch"
+
+   class CarritoDeCompraControler implements PostDtoOneToMany
+   CarritoDeCompraControler --> CarritosDeCompraDto
+
+   class CarritoDeCompraControler
+   note right: "Create EndPoints:\nto Only Post!!!"
+
+
+}
+
+package Services{
+  abstract class GenericEntityService{
+    {abstract} getRepository()
+  }
+
+  class GenericDtoService extends GenericEntityService
+  DtoBasicBehavior ..> GenericDtoService
+  class CarritoDeCompraService extends GenericDtoService {
+   - productos
+   - carritosDeCompra
+  }
+  CarritoDeCompraControler --> CarritoDeCompraService
+}
+@enduml

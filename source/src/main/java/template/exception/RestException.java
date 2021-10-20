@@ -3,13 +3,16 @@ package template.exception;
 import com.fasterxml.jackson.databind.exc.InvalidFormatException;
 import jdk.internal.instrumentation.Logger;
 import lombok.var;
+import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.context.support.DefaultMessageSourceResolvable;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
+import org.springframework.transaction.TransactionSystemException;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -104,13 +107,30 @@ public class RestException  extends ResponseEntityExceptionHandler  {
         return buildResponseEntity(new ErrorMessage(BAD_REQUEST,errorMessage, ex));
     }
 
+    //Custom Exception org.hibernate.exception.ConstraintViolationException
+    @ExceptionHandler(ConstraintViolationException.class)
+    public ResponseEntity<Object> handleConstraintViolation(ConstraintViolationException ex,
+                                                            WebRequest request) {
 
-   /* @ExceptionHandler(DataIntegrityViolationException.class)
+        if( ex.getCause().getMessage().contains("Duplicate entry")){
+            return buildResponseEntity(new ErrorMessage(BAD_REQUEST,"The resource exists!", ex));
+
+        }
+        return buildResponseEntity(new ErrorMessage(INTERNAL_SERVER_ERROR,"unknown error", ex));
+    }
+
+
+
+/*
+
+    @ExceptionHandler(DataIntegrityViolationException.class)
     protected ResponseEntity<Object> handleDataIntegrityViolation(DataIntegrityViolationException ex,
                                                                   WebRequest request) {
+        String message = ex.getMessage();
 
         return buildResponseEntity(new ErrorMessage(BAD_REQUEST, ex));
-    }*/
+    }
+*/
 
 
     /**
@@ -160,6 +180,13 @@ public class RestException  extends ResponseEntityExceptionHandler  {
     @ExceptionHandler(template.exception.GenericException.class)
     private ResponseEntity<Object> GenericExceptionFailureException(GenericException ex) {
         return buildResponseEntity(new ErrorMessage(BAD_REQUEST, ex.getMessage(), ex));
+    }
+
+    @ExceptionHandler(org.hibernate.exception.SQLGrammarException.class)
+    private ResponseEntity<Object> PermissionExceptionFailure(
+            org.hibernate.exception.SQLGrammarException ex ){
+
+        return buildResponseEntity(new ErrorMessage(INTERNAL_SERVER_ERROR, "Internal Server Error", ex));
     }
 
 

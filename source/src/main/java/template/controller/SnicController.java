@@ -2,22 +2,22 @@ package template.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import template.model.Barrio;
-import template.service.BarrioService;
-import template.service.GenericEntityService;
+import template.dto.SnicDto;
+import template.model.Snic;
+import template.service.GenericDtoService;
+import template.service.SnicDtoService;
 
 @RestController
-@RequestMapping("/template/barrios")
+@RequestMapping("/snic")
 @CrossOrigin(origins = "*", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE, RequestMethod.OPTIONS, RequestMethod.HEAD})
-public class BarrioController extends GenericEntityController<Barrio, Long> {
+public class SnicController extends GenericDtoController<SnicDto,Snic, Long> {
 
     @Autowired
-    private BarrioService barrioService;
+    private SnicDtoService snicService;
 
     @Override
-    protected GenericEntityService<Barrio, Long> getService() {
-        return barrioService;
+    protected GenericDtoService<SnicDto,Snic, Long> getService() {
+        return snicService;
     }
 
 

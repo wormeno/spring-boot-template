@@ -1,7 +1,16 @@
+## Objetivos
+* Mantener el Estándar de "Buenas Prácticas" cuando se crean Servicios Rest.
+* Integraciones con sistemas satélites.
 
 ### Diagrama de clases
+
+#### Implementación de los servicios Rest
+* Implementación usando Herencia Simple
+
 ![Diagrama de clases](/documents/Files/DiagramClass.svg "Diagram class")
 
+* Implementación usando Mixins
+  ![Diagrama de clases](/documents/Files/ImplementatiosWithMixin.png "Diagram class")
 
 ### Diagrama de manejo de excepciones
 

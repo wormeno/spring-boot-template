@@ -14,6 +14,7 @@ import java.time.chrono.ChronoLocalDateTime;
 @Data
 public class DtoPersistente implements Serializable {
     @Id
+    @JsonIgnore
     private Long id;
 
     @JsonIgnore

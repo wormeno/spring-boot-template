@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
-public class EntidadPersistente{
+public  class EntidadPersistente{
 
 
     @Id
@@ -19,11 +19,11 @@ public class EntidadPersistente{
     private Long id;
 
     @JsonIgnore
-    @Column(name = "create_date")
+    @Column(name = "fecha_creacion")
     private LocalDateTime createDate;
 
     @JsonIgnore
-    @Column(name = "last_modified_date")
+    @Column(name = "fecha_ultima_modificacion")
     private LocalDateTime lastModifiedDate;
 
     public Long getId() {

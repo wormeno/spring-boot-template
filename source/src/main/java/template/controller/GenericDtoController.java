@@ -16,6 +16,8 @@ public abstract  class GenericDtoController <D extends DtoPersistente,E extends 
 
     protected abstract GenericDtoService<D,E, ID> getService();
 
+
+
     public ResponseEntity<?> save(@Valid @RequestBody D saveEntity) {
 
         D entity = getService().save( saveEntity);

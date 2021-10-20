@@ -15,6 +15,8 @@ public abstract class GenericEntityService<E extends EntidadPersistente ,ID> /*i
 
     protected abstract JpaRepository<E, ID> getRepository();
 
+    protected void applyBusinessRules(E entity){   }
+
 
 /*    public void GenericService(JpaRepository<E,ID> repository, EntidadPersistente<ID> service){
         this.repository = repository;
@@ -26,6 +28,7 @@ public abstract class GenericEntityService<E extends EntidadPersistente ,ID> /*i
         if (entity.getId() != null)
             throw new GenericException("No se puede actualizar un registro existente : "+entity.getId());
         entity.setCreateDate(LocalDateTime.now());
+        applyBusinessRules(entity);
         return getRepository().save(entity);
     }
 
@@ -46,6 +49,7 @@ public abstract class GenericEntityService<E extends EntidadPersistente ,ID> /*i
                         throw new GenericException("Debe completar "+unaEntidad.getKey().toString());
                 });
 
+        applyBusinessRules(entity);
         return this.getRepository().save(entity);
     }
 

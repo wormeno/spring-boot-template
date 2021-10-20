@@ -5,68 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07b44574-02b9-4f7f-ae1b-e67c80f16e3f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documents/DIAGRAM_CLASS.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documents/DOCUMENTATION.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documents/Files/CustomValidations.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documents/Files/CustomValidations.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documents/Files/DiagramClass.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documents/Files/HandlingExceptions.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schema.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/src/main/java/template/Validation/CuitConstraint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/src/main/java/template/Validation/CuitValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/src/main/java/template/controller/BarrioDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/src/main/java/template/controller/GenericController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/src/main/java/template/controller/GenericDtoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/src/main/java/template/controller/GenericEntityController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/src/main/java/template/controller/PruebaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/src/main/java/template/dto/BarrioDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/src/main/java/template/dto/DtoPersistente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/src/main/java/template/dto/IgnoreUpdateDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/src/main/java/template/exception/EntityNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/src/main/java/template/exception/ErrorMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/src/main/java/template/exception/RestException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/src/main/java/template/exception/generic/ApiError.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/src/main/java/template/exception/generic/ApiSubError.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/src/main/java/template/exception/generic/ApiValidationError.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/src/main/java/template/exception/generic/LowerCaseClassNameResolver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/src/main/java/template/exception/generic/RestExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/src/main/java/template/model/Prueba.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/src/main/java/template/repository/PruebaUserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/src/main/java/template/service/GenericDtoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/src/main/java/template/service/GenericEntityService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/src/main/java/template/service/GenericServices.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/src/main/java/template/utils/UtilsTemplate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/source/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/source/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/source/schema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/controller/BarrioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/src/main/java/template/controller/BarrioController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/src/main/java/template/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/src/main/java/template/dto/UserDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/dto/UserMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/generic/controller/GenericController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/generic/controller/RestGenericController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/generic/exeption/GenericException.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/src/main/java/template/exception/GenericException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/generic/model/EntidadPersistente.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/src/main/java/template/model/EntidadPersistente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/generic/service/GenericService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/model/Barrio.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/src/main/java/template/model/Barrio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/controller/BarrioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/src/main/java/template/controller/SnicController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/controller/BarrioDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/controller/GenericDtoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/src/main/java/template/controller/GenericDtoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/dto/DtoPersistente.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/src/main/java/template/dto/DtoPersistente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/exception/RestException.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/src/main/java/template/exception/RestException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/model/EntidadPersistente.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/src/main/java/template/model/EntidadPersistente.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/src/main/java/template/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/src/main/java/template/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/service/BarrioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/src/main/java/template/service/BarrioService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/repository/BarrioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/src/main/java/template/repository/SnicRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/service/BarrioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/src/main/java/template/service/SnicDtoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/service/GenericDtoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/src/main/java/template/service/GenericDtoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/service/GenericEntityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/src/main/java/template/service/GenericEntityService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/src/main/java/template/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/src/main/java/template/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/main/java/template/utils/UtilsTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/src/main/java/template/utils/UtilsTemplate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/source/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,6 +34,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -127,6 +82,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.15174508" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
@@ -153,6 +111,12 @@
       <option name="presentableId" value="Default" />
       <updated>1629318602654</updated>
       <workItem from="1629318604019" duration="78779000" />
+      <workItem from="1630608504965" duration="2783000" />
+      <workItem from="1630930445593" duration="622000" />
+      <workItem from="1631115659550" duration="2948000" />
+      <workItem from="1631124280538" duration="1387000" />
+      <workItem from="1631193551816" duration="1253000" />
+      <workItem from="1631203888902" duration="8000" />
     </task>
     <servers />
   </component>
@@ -176,7 +140,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/source/src/main/java/template/controller/GenericDtoController.java</url>
-          <line>49</line>
+          <line>51</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -249,18 +213,53 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/source/src/main/java/template/exception/RestException.java</url>
-          <line>121</line>
+          <line>141</line>
           <option name="timeStamp" value="58" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/source/src/main/java/template/exception/RestException.java</url>
-          <line>144</line>
+          <line>164</line>
           <option name="timeStamp" value="60" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/source/src/main/java/template/Validation/CuitValidator.java</url>
           <line>17</line>
           <option name="timeStamp" value="85" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/source/src/main/java/template/Validation/YearValidator.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="90" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/source/src/main/java/template/Validation/TipoDelitoSnicValidator.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="96" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/source/src/main/java/template/exception/RestException.java</url>
+          <line>130</line>
+          <option name="timeStamp" value="103" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/source/src/main/java/template/service/GenericDtoService.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="104" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/source/src/main/java/template/exception/RestException.java</url>
+          <line>128</line>
+          <option name="timeStamp" value="106" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/source/src/main/java/template/exception/RestException.java</url>
+          <line>88</line>
+          <option name="timeStamp" value="107" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/source/src/main/java/template/exception/RestException.java</url>
+          <line>189</line>
+          <option name="timeStamp" value="111" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
